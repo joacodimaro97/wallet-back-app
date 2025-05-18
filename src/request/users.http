@@ -1,0 +1,36 @@
+### Crear usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "email": "usuariodos@example.com",
+  "contraseña": "hola1234",
+  "nombre": "Usuario dos"
+}
+
+### Obtener todos los usuarios
+GET http://localhost:3000/usuarios
+
+### Obtener usuario por ID
+GET http://localhost:3000/usuarios/123
+
+### Obtener usuario por email
+GET http://localhost:3000/usuarios/email/test@example.com
+
+### Actualizar usuario
+PUT http://localhost:3000/usuarios/123
+Content-Type: application/json
+
+{
+  "nombre": "Usuario Actualizado",
+  "email": "nuevo@email.com"
+}
+
+### Activar usuario
+PUT http://localhost:3000/usuarios/123/activar
+
+### Desactivar usuario
+PUT http://localhost:3000/usuarios/123/desactivar
+
+### Eliminar usuario
+DELETE http://localhost:3000/usuarios/123
